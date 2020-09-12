@@ -6,6 +6,7 @@ class GridMenu extends React.Component{
     render(){
         return(
             <div className='grid-menu'>
+                
                 <div>
                     <div className='cell-container'>
                         <div className='cell'>

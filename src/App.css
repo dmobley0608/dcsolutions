@@ -41,6 +41,15 @@
 }
 /*Grid Menu*/
 
+@-webkit-keyframes rotate{
+  0%{
+    transform: rotateY(0deg);
+  }
+  100%{
+    transform: rotateY(360deg);
+  }
+}
+
 @keyframes rotate{
   0%{
     transform: rotateY(0deg);
@@ -49,6 +58,8 @@
     transform: rotateY(360deg);
   }
 }
+
+
 .grid-menu{ 
   display:flex;  
   position:absolute;
@@ -76,13 +87,24 @@
   padding: 1.5em;
   color: white;
   background-color: rgba(105, 105, 105, 0.363);
-  animation:rotate 3s 1;
+  backface-visibility: hidden;
+  -webkit-animation:rotate 3s 1;
+          animation:rotate 3s 1;
+}
+.grow{
+ position: absolute;
+  transform:scale(4);
+  background-color: dimgrey;  
 }
 
 .cell:hover{
-  transform: scale(1.5);
+ 
   background-color: dimgrey;
   cursor: pointer;
+}
+
+.back{
+  font-size: .75em;
 }
 
 
@@ -115,6 +137,13 @@
     padding-top: 2em;
     color: white;
    
+  }
+  .grow{  
+  transform:scale(2);
+  margin-left: 4em; 
+  }
+  .back{
+    font-size: 10px;
   }
 }
 

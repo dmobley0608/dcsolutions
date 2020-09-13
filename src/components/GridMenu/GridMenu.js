@@ -1,20 +1,48 @@
-import React from 'react';
-
+import React from 'react';   
 
 
 class GridMenu extends React.Component{
+   
+    toggle=(element) => {
+        const elem = document.getElementById(element);
+        if (elem.style.display === ""){
+            elem.style.display = "none";
+        }else if (elem.style.display === 'none'){
+            elem.style.display = '';
+        }
+    }
+    growUp = (element)=>{
+        const elem = document.getElementById(element);
+        if(elem.classList.contains('grow')){
+            elem.classList.remove('grow');
+        }else if (elem.classList !=='grow'){
+            elem.classList.add('grow');
+        }
+       
+    }
     render(){
         return(
             <div className='grid-menu'>
                 
                 <div>
                     <div className='cell-container'>
-                        <div className='cell'>
-                            <svg width="5em" height="5em" viewBox="0 0 16 16" className="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
-                            <path fillRule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                        <div id='welcome'  className='cell' onClick={()=>{
+                            this.toggle('welcome-front') 
+                            this.toggle('welcome-back')
+                            this.growUp('welcome')
+                        }}>
+                            <div id='welcome-front' style={{display:''}} >
+                                <svg   width="5em" height="5em" viewBox="0 0 16 16" className="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+                                    <path fillRule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
                                 </svg>
-                            <p>Welcome</p>
+                                <p>Welcome</p>
+                            </div>                                                         
+                                <p id='welcome-back' className='back' style={{display:'none'}}>
+                                    Thank you for visiting Dwight's Computer Solutions. We offer a 
+                                    variety of services ranging from pc repair to web development.
+                                    Please use the contact us link if you would like a quote or have a 
+                                    question</p>                      
                         </div>
                     </div>   
                     

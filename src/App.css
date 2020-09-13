@@ -59,6 +59,27 @@
   }
 }
 
+#welcome{
+  animation: rotate 3s 1;         
+ }
+
+ #ourWork{
+  animation: rotate 3s  1s 1;
+ }
+
+ #contact{
+  animation: rotate 3s  .5s 1;
+  
+ }
+
+ 
+
+
+
+ #myAccount{
+  animation: rotate 3s  1.5s 1;
+ }
+
 
 .grid-menu{ 
   display:flex;  
@@ -87,24 +108,35 @@
   padding: 1.5em;
   color: white;
   background-color: rgba(105, 105, 105, 0.363);
-  backface-visibility: hidden;
-  -webkit-animation:rotate 3s 1;
-          animation:rotate 3s 1;
 }
+
 .grow{
  position: absolute;
+ top:8em;
   transform:scale(4);
   background-color: dimgrey;  
 }
 
 .cell:hover{
- 
-  background-color: dimgrey;
+ background-color: dimgrey;
+}
+.pointer:hover{
   cursor: pointer;
+  background-color: dimgrey;
+  transform: scale(1.25);
+ 
 }
 
 .back{
-  font-size: .75em;
+  font-size: 12px;
+  cursor: default;
+  transform: scale(.75);
+}
+
+.form{
+  transform: scale(.75);
+  position:fixed;
+  
 }
 
 

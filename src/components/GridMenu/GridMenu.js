@@ -35,7 +35,7 @@ class GridMenu extends React.Component{
                     {/* Welcome Button */}
                     <div className='cell-container'>
                         <div id='welcome'  className='cell'>
-                            <div id='welcome-front' className='pointer' onClick={()=>{
+                            <div id='welcome-front' className='inner-cell' onClick={()=>{
                                 this.addClass('welcome', 'grow')
                                 this.toggleView('welcome-front')
                                 this.toggleView('welcome-back') 
@@ -64,7 +64,7 @@ class GridMenu extends React.Component{
                     {/* Our Work Button */}
                     <div className='cell-container'>
                         <div id='ourWork' className='cell'>
-                            <div id='ourWork-front'  onClick={()=>{
+                            <div id='ourWork-front' className='inner-cell'  onClick={()=>{
                                 this.addClass('ourWork', 'grow')
                                 this.toggleView('ourWork-front')
                                 this.toggleView('ourWork-back') 
@@ -93,7 +93,7 @@ class GridMenu extends React.Component{
                     {/* Contact Us Button */}
                     <div className='cell-container' >
                         <div id='contact' className='cell'>
-                            <div id='contact-front' onClick={()=>{
+                            <div id='contact-front' className='inner-cell' onClick={()=>{
                                 this.addClass('contact', 'grow')
                                 this.toggleView('contact-front')
                                 this.toggleView('contact-back') 
@@ -104,8 +104,7 @@ class GridMenu extends React.Component{
                                 </svg>
                                 <p>Contact Us</p>
                             </div>
-                            <div id='contact-back' className ='back' style={{display:'none'}} >
-                               
+                            <div id='contact-back' className ='back' style={{display:'none'}} >                               
                                     <div className="form form-group" style={{top:'0'}}>  
                                         <h1>Contact Us</h1>                              
                                         <input type="text" className="form-control form-control-sm" placeholder="First Name" />
@@ -126,11 +125,14 @@ class GridMenu extends React.Component{
                     {/* My Account Button */}
                     <div>
                         <div id='myAccount' className='cell'>
+                            <div className='inner-cell'>
                             <svg width="5em" height="5em" viewBox="0 0 16 16" className="bi bi-person-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
                                 <path fillRule="evenodd" d="M2 15v-1c0-1 1-4 6-4s6 3 6 4v1H2zm6-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                             </svg>
                             <p>My Account</p>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

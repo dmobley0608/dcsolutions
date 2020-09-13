@@ -69,18 +69,14 @@
 
  #contact{
   animation: rotate 3s  .5s 1;
-  
- }
+}
 
  
-
-
-
  #myAccount{
   animation: rotate 3s  1.5s 1;
  }
 
-
+ 
 .grid-menu{ 
   display:flex;  
   position:absolute;
@@ -106,6 +102,7 @@
   height: 10em;
   margin:1em;
   padding: 1.5em;
+  padding-top: 0;
   color: white;
   background-color: rgba(105, 105, 105, 0.363);
 }
@@ -114,18 +111,21 @@
  position: absolute;
  top:8em;
   transform:scale(4);
-  background-color: dimgrey;  
+  background-color: dimgrey;
+  border-radius: 1em;  
 }
 
-.cell:hover{
- background-color: dimgrey;
+.inner-cell{
+  padding-top: 2em;
 }
-.pointer:hover{
-  cursor: pointer;
-  background-color: dimgrey;
-  transform: scale(1.25);
- 
-}
+
+.inner-cell:hover{
+  background-color: rgb(253, 253, 253);
+  color:black;
+  border-radius: 1em;
+  transform:scale(1.5); 
+ }
+
 
 .back{
   font-size: 12px;

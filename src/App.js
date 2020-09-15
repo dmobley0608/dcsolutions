@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      route: 'contactUs'
+      route: 'home'
     }
   }
   

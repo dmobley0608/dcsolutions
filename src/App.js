@@ -31,7 +31,7 @@ class App extends React.Component {
       <Greeting /> 
       <GridMenu onRouteChange={this.onRouteChange}/>
       {route === 'contactUs'
-      ?<ContactUs onRouteChange={this.onRouteChange}/>
+      ?<ContactUs onRouteChange={this.onRouteChange} route={route}/>
       :<div></div>
       }   
     </div>

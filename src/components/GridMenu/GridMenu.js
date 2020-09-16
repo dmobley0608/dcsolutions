@@ -53,11 +53,14 @@ class GridMenu extends React.Component{
                                     Please use the<span className='link' onClick={()=>{this.growUp('contact')}}> contact us</span> link if you would like a quote or have a 
                                     question.
                                 </p>
-                                <button  type="button" className="btn btn-primary btn-lg btn-block"  onClick={()=>{
+                                <div className='' >
+                                <button type="button" className="btn btn-light btn-sm back"  onClick={()=>{
                                         this.removeClass('welcome','grow')
                                         this.toggleView('welcome-front')
                                         this.toggleView('welcome-back')}}
-                                    >Back</button>                                    
+                                    >Back</button>        
+                                </div>
+                                                            
                             </div>                 
                         </div>
                     </div>   
@@ -76,7 +79,7 @@ class GridMenu extends React.Component{
                             </div>
                             <div id='ourWork-back' className='back' style={{display:'none'}}>
                                 <p >Under Construction</p>
-                                <button type="button" name="" id="" className="btn btn-primary btn-lg btn-block" onClick={()=>{
+                                <button type="button" name="" id="" className="btn btn-light btn-sm back" onClick={()=>{
                                         this.removeClass('ourWork','grow')
                                         this.toggleView('ourWork-front')
                                         this.toggleView('ourWork-back')}}>Back</button>

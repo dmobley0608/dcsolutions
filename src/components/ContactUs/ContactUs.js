@@ -42,13 +42,16 @@ class ContactUs extends React.Component{
             email: this.state.email
         };
         if(this.state.email.length > 1){
+            
             emailjs.send('contact_service','contact_form', templateParams, "user_RMkv4Xk720JMhtey0EJvM")
-            .then(response => this.setState({messageResponse:'Message Sent'}))
+            .then(response => this.setState({messageResponse:'Message Sent. This window will close automatically.'}))
             .catch(err => console.log(err))
             
             emailjs.send('contact_service','template_6bd25fl', templateResponseParams, "user_RMkv4Xk720JMhtey0EJvM")
             .then(response => console.log(response))
-            .catch(err => console.log(err))     
+            .catch(err => console.log(err)) 
+            
+            setTimeout(()=>{this.props.onRouteChange('home')}, 7000)
         } else{
             this.setState({messageResponse:'Please enter a valid email address'});
         }       
@@ -90,13 +93,12 @@ class ContactUs extends React.Component{
                             </div>
                             <div  className='mx-2  w-50'>
                                 <button onClick={()=>{
-                                    this.onSubmitSend()
-                                    setTimeout(()=>{this.props.onRouteChange('home')}, 7000)
+                                    this.onSubmitSend()                                    
                                     }} type="submit" value='send' className="btn btn-primary btn-block border">Submit</button>         
                             </div>                                       
                         </div>
                         <div>
-                             <h2>{this.state.messageResponse}</h2>
+                             <p>{this.state.messageResponse}</p>
                         </div>             
                     </div> 
                                                

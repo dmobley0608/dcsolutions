@@ -1,9 +1,10 @@
 import React from 'react';
 import Background from './components/Background/Background';
 import Greeting from './components/Greeting/Greeting'
-import './App.css';
+
 import GridMenu from './components/GridMenu/GridMenu';
 import ContactUs from './components/ContactUs/ContactUs';
+import './App.css';
 
 
 
@@ -27,7 +28,7 @@ class App extends React.Component {
   
   return (
     <div className="App">
-      <Background/>   
+       <Background/> 
       <Greeting /> 
       <GridMenu onRouteChange={this.onRouteChange}/>
       {route === 'contactUs'

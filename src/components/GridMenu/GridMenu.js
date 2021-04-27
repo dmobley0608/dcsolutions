@@ -48,9 +48,9 @@ class GridMenu extends React.Component{
                             </div>  
                             <div id='welcome-back' className='back' style={{display:'none'}}>
                                 <p >
-                                    Thank you for visiting dcSolutions.tech. We offer a 
+                                    Thank you for visiting TCCS.tech. We offer a 
                                     variety of services ranging from pc repair to web development.
-                                    Please use the<span className='link' onClick={()=>{this.growUp('contact')}}> contact us</span> link if you would like a quote or have a 
+                                    Please use<span className='link '> Contact Us</span> link if you would like a quote or have a 
                                     question.
                                 </p>
                                 <div className='' >

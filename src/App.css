@@ -3,6 +3,10 @@
   text-align: center; 
 }
 
+.bg{ 
+  background: linear-gradient(to right top, #00486f, #006d94, #0094b4, #00bccc, #0ae5db);
+}
+
 .pushback{
   z-index: -1;
 }
@@ -23,7 +27,7 @@
   align-items: center;
   padding: 50px 15px;
   position: absolute;
-  left: 5rem;  
+  left: 3.5rem;  
   top: 0;
   bottom: 0;
   overflow: auto; 

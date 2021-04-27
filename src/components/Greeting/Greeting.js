@@ -7,7 +7,7 @@ class Greeting extends React.Component{
         return(
             <div className='greeting'>
                 <div className='dcs'>
-                    <h1 style = {{marginBottom:'0'}}>Dwight's<span>&nbsp;</span> Computer Solutions</h1>                   
+                    <h1 style = {{marginBottom:'0'}}>Tim's Custom Computer Solutions</h1>                   
                     <img alt= 'underline' src={underline} style={{lineHeight:'0'}} />              
                 </div>
             </div>
